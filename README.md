@@ -1,3 +1,8 @@
+# Change from original repository
+
+This repository has being changed to support Quarkus natively compiled microservices.
+Simpy said zlib was added to all UBI images.
+
 # Preparation
 Clone to repository:
 
