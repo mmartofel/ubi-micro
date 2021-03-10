@@ -5,7 +5,7 @@ MAINTAINER Scott McCarty smccarty@redhat.com
 #disable extraineous repos
 RUN sed -e 's/enabled\ =\ 1/enabled\ =\ 0/g' -e '/\[ubi-7]/,/^ *\[/ s/enabled\ =\ 0/enabled\ =\ 1/' -i /etc/yum.repos.d/ubi.repo
 RUN mkdir -p /mnt/rootfs
-RUN yum install --installroot /mnt/rootfs coreutils glibc --releasever 7 --setopt=tsflags=nodocs -y
+RUN yum install --installroot /mnt/rootfs coreutils glibc zlib --releasever 7 --setopt=tsflags=nodocs -y
 RUN rm -rf /mnt/rootfs/var/cache/*
 # RUN rm -rf /mnt/rootfs/var/lib/rpm
 
